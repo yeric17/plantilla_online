@@ -1,0 +1,11 @@
+input{
+    background: none;
+    border: none;
+    font-family: inherit;
+}
+.mrNext, .mrStop, .mrPrev{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    left: 0;
+}
