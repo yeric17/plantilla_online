@@ -12,38 +12,37 @@
     <mrPage IncludeElementIDs="true" />
     <mrPage IncludeCSSNames='true' />
 
-
-    <div class="navbar-fixed z-depth-3">
-        <mrRef RefType="nav">
-            <div class="nav-wraper">
-                <mrRef RefType="img" style="height: 100%;" class="left brand-logo" src="https://images1.ipsosinteractive.com/images/Colombia/icon-ipsos.svg"
-                    alt="logo-terpel"></mrRef>
+    <div class="main">
+        <div class="navbar-fixed z-depth-3">
+            <mrRef RefType="nav">
+                <div class="nav-wraper">
+                    <mrRef RefType="img" style="height: 100%;" class="left brand-logo" src="https://images1.ipsosinteractive.com/images/Colombia/icon-ipsos.svg"
+                        alt="logo-terpel"></mrRef>
+                </div>
+            </mrRef>
+        </div>
+        <div class="container content">
+            <mrData></mrData>
+        </div>
+        <footer class="page-footer">
+                <div class="footer-copyright">
+                    <span>© 2017 Ipsos All Rights Reserved</span>
+                </div>
+        </footer>
+        <div class="fixed-action-btn ">
+            <div class="btn-floating btn-large red waves-effect waves-light pulse">
+                <i class="large material-icons">keyboard_arrow_right</i>
+                <mrNavButton  Name="Next" Text="">keyboard_arrow_right</mrNavButton>
             </div>
-        </mrRef>
-    </div>
-    <div class="container">
-        <mrData></mrData>
-    </div>
-    <div class="l-footer">
-        <div class="c-footer__legal">
-            <mrRef RefType="img" style="width: 2rem" class="legal__logo" src="https://images1.ipsosinteractive.com/images/Colombia/icon-ipsos.svg"
-                alt="logo-ipsos"></mrRef>
-            <span class="legal__text">© 2017 Ipsos All Rights Reserved</span>
-        </div>
-    </div>
-    <div class="fixed-action-btn ">
-        <div class="btn-floating btn-large red waves-effect waves-light pulse">
-            <i class="large material-icons">keyboard_arrow_right</i>
-            <mrNavButton  Name="Next" Text="">keyboard_arrow_right</mrNavButton>
-        </div>
-        <ul>
-            <li><a class="btn-floating green waves-effect waves-light"><i class="material-icons">navigate_before</i>
-                    <mrNavButton Name="Prev" Text="" />
+            <ul>
+                <li><a class="btn-floating green waves-effect waves-light"><i class="material-icons">navigate_before</i>
+                        <mrNavButton Name="Prev" Text="" />
+                    </a></li>
+                <li><a class="btn-floating red waves-effect waves-light"><i class="material-icons">pause</i>
+                        <mrNavButton Name="Stop" Text="" />
                 </a></li>
-            <li><a class="btn-floating red waves-effect waves-light"><i class="material-icons">pause</i>
-                    <mrNavButton Name="Stop" Text="" />
-            </a></li>
-        </ul>
+            </ul>
+        </div>
     </div>
     <mrRef RefType="script" type="text/javascript" src="public/js/bin/materialize.js">Text</mrRef>
     <mrRef RefType="script" type="text/javascript" src="public/js/bin/init.js">Text</mrRef>

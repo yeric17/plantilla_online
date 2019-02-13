@@ -27,6 +27,13 @@
         <script>
             var inputField = document.getElementsByClassName("input-field")[0];
             var mrEdit = inputField.getElementsByClassName("mrEdit")[0]
-            mrEdit.classList.add("timepicker");   
+            mrEdit.classList.add("timepicker");
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.timepicker');
+                var TimePicker = M.Timepicker.init(elems, {
+                    
+                }); 
+            });
         </script>
 </mrSubTemplate>

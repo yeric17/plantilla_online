@@ -9,3 +9,12 @@ input{
     position: absolute;
     left: 0;
 }
+
+.main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.content{
+    flex-grow: 1;
+}

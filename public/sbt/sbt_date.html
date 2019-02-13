@@ -27,6 +27,27 @@
         <script>
             var inputField = document.getElementsByClassName("input-field")[0];
             var mrEdit = inputField.getElementsByClassName("mrEdit")[0]
-            mrEdit.classList.add("datepicker");   
+            mrEdit.classList.add("datepicker");
+            var months = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+            var monthsShort = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"]
+            var weekdays =  ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]
+            var weekdaysShort = ["Dom",	"Lun",	"Mar",	"Mie",	"Jue",	"Vie",	"Sab"]
+            var weekdaysAbbrev	= ['D','L','M','X','J','V','S']
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.datepicker');
+                var DatePicker = M.Datepicker.init(elems, {
+                    format: "dd/mm/yyyy",
+                    i18n: { 
+                        months: months,
+                        monthsShort: monthsShort,
+                        weekdays:weekdays,
+                        weekdaysShort:weekdaysShort,
+                        weekdaysAbbrev:weekdaysAbbrev,
+                        cancel: "Cancelar",
+                        done: "Aceptar"
+                    }
+                });
+            })
         </script>
 </mrSubTemplate>

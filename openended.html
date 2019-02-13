@@ -19,18 +19,19 @@
 <body>
     <form name="mrForm" id="mrForm" action="http://localhost:5080" method="post"><input type="hidden" name="I.Engine"
             value="Server" /><input type="hidden" name="I.Project" value="online" /><input type="hidden" name="I.Session"
-            value="zfyjhryir3fezma6jlqvl3d62eaqaaaa" /><input type="hidden" name="I.SavePoint" value="Q_Date" /><input
+            value="zv3hha1qa1eubfqiwz4pi2uyryaqaaaa" /><input type="hidden" name="I.SavePoint" value="Q_DateTime" /><input
             type="hidden" name="I.Renderer" value="HTMLPlayer" />
-        <div class="navbar-fixed z-depth-3">
-            <nav>
-                <div class="nav-wraper">
-                    <img style="height: 100%;" class="left brand-logo" src="https://images1.ipsosinteractive.com/images/Colombia/icon-ipsos.svg"
-                        alt="logo-terpel" /></div>
-            </nav>
-        </div>
-        <div class="container">
-            <style>
-                label{
+        <div class="main">
+            <div class="navbar-fixed z-depth-3">
+                <nav>
+                    <div class="nav-wraper">
+                        <img style="height: 100%;" class="left brand-logo" src="https://images1.ipsosinteractive.com/images/Colombia/icon-ipsos.svg"
+                            alt="logo-terpel" /></div>
+                </nav>
+            </div>
+            <div class="container content">
+                <style>
+                    label{
                     color: inherit !important;
                 }   
                 .mrQuestionText{
@@ -40,52 +41,57 @@
                     margin-left: 0 !important;
                 } 
         </style>
-            <div class="container">
-                <div class="card hoverable">
-                    <div class="card-content teal lighten-2 white-text">
-                        <label for="_Q0">
-                            <div></div>
-                            <span class="mrQuestionText" style="">En que fecha usted asistio a este centro comercial</span>
-                        </label>
-                    </div>
-                    <div class="card-action">
-                        <div class="input-field">
-                            <div></div>
-                            <span style="">
+                <div class="container">
+                    <div class="card hoverable">
+                        <div class="card-content teal lighten-2 white-text">
+                            <label for="_Q0">
                                 <div></div>
-                                <input type="text" name="_QQ__Date" id="_Q0" class="mrEdit" autocomplete="off" style="margin-left: 1em;"
-                                    maxlength="40" value="" />
-                            </span>
+                                <span class="mrQuestionText" style="">A que hora ingreso al centro comercial</span>
+                            </label>
+                        </div>
+                        <div class="card-action">
+                            <div class="input-field">
+                                <div></div>
+                                <span style="">
+                                    <div></div>
+                                    <input type="text" name="_QQ__DateTime" id="_Q0" class="mrEdit" autocomplete="off"
+                                        style="margin-left: 1em;" maxlength="40" value="" />
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <script>
-                var inputField = document.getElementsByClassName("input-field")[0];
+                <script>
+                    var inputField = document.getElementsByClassName("input-field")[0];
             var mrEdit = inputField.getElementsByClassName("mrEdit")[0]
+            mrEdit.classList.add("timepicker");
 
-            mrEdit.classList.add("datepicker");
-            
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.timepicker');
+                var TimePicker = M.Timepicker.init(elems, {
+                    
+                }); 
+            });
         </script>
-        </div>
-        <div class="l-footer">
-            <div class="c-footer__legal">
-                <img style="width: 2rem" class="legal__logo" src="https://images1.ipsosinteractive.com/images/Colombia/icon-ipsos.svg"
-                    alt="logo-ipsos" /><span class="legal__text">© 2017 Ipsos All Rights Reserved</span>
             </div>
-        </div>
-        <div class="fixed-action-btn ">
-            <div class="btn-floating btn-large red waves-effect waves-light pulse">
-                <i class="large material-icons">keyboard_arrow_right</i>
-                <input type="submit" name="_NNext" class="mrNext" style="width: 70px;" value="" alt=""></input>
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <span>© 2017 Ipsos All Rights Reserved</span>
+                </div>
+            </footer>
+            <div class="fixed-action-btn ">
+                <div class="btn-floating btn-large red waves-effect waves-light pulse">
+                    <i class="large material-icons">keyboard_arrow_right</i>
+                    <input type="submit" name="_NNext" class="mrNext" style="width: 70px;" value="" alt=""></input>
+                </div>
+                <ul>
+                    <li><a class="btn-floating green waves-effect waves-light"><i class="material-icons">navigate_before</i>
+                        </a></li>
+                    <li><a class="btn-floating red waves-effect waves-light"><i class="material-icons">pause</i>
+                            <input type="submit" name="_NStop" class="mrStop" style="width: 70px;" value="" alt=""></input>
+                        </a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a class="btn-floating green waves-effect waves-light"><i class="material-icons">navigate_before</i>
-                    </a></li>
-                <li><a class="btn-floating red waves-effect waves-light"><i class="material-icons">pause</i>
-                        <input type="submit" name="_NStop" class="mrStop" style="width: 70px;" value="" alt=""></input>
-                    </a></li>
-            </ul>
         </div>
         <script type="text/javascript" src="public/js/bin/materialize.js">
             Text
