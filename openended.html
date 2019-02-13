@@ -19,7 +19,7 @@
 <body>
     <form name="mrForm" id="mrForm" action="http://localhost:5080" method="post"><input type="hidden" name="I.Engine"
             value="Server" /><input type="hidden" name="I.Project" value="online" /><input type="hidden" name="I.Session"
-            value="bk241vqtom6engt1cfgpbtqsymaqaaaa" /><input type="hidden" name="I.SavePoint" value="Q_OpenEnded" /><input
+            value="zfyjhryir3fezma6jlqvl3d62eaqaaaa" /><input type="hidden" name="I.SavePoint" value="Q_Date" /><input
             type="hidden" name="I.Renderer" value="HTMLPlayer" />
         <div class="navbar-fixed z-depth-3">
             <nav>
@@ -29,41 +29,43 @@
             </nav>
         </div>
         <div class="container">
+            <style>
+                label{
+                    color: inherit !important;
+                }   
+                .mrQuestionText{
+                    color: inherit;
+                }
+                .mrEdit{
+                    margin-left: 0 !important;
+                } 
+        </style>
             <div class="container">
                 <div class="card hoverable">
+                    <div class="card-content teal lighten-2 white-text">
+                        <label for="_Q0">
+                            <div></div>
+                            <span class="mrQuestionText" style="">En que fecha usted asistio a este centro comercial</span>
+                        </label>
+                    </div>
                     <div class="card-action">
                         <div class="input-field">
                             <div></div>
                             <span style="">
                                 <div></div>
-                                <textarea name="_QQ__OpenEnded" id="_Q0" class="mrEdit" autocomplete="off" style="margin-left: 1em;"
-                                    rows="6" cols="40"></textarea>
+                                <input type="text" name="_QQ__Date" id="_Q0" class="mrEdit" autocomplete="off" style="margin-left: 1em;"
+                                    maxlength="40" value="" />
                             </span>
-                            <label for="_Q0">
-                                <div></div>
-                                <span class="mrQuestionText" style="">Número de Celular</span>
-                            </label>
                         </div>
                     </div>
                 </div>
             </div>
             <script>
-             var inputField = document.getElementsByClassName("input-field")[0];
-            var span = document.getElementsByTagName("span")[0];
-            var textA = span.getElementsByClassName("mrEdit")[0];
-            var label = inputField.getElementsByTagName("label")[0];
+                var inputField = document.getElementsByClassName("input-field")[0];
+            var mrEdit = inputField.getElementsByClassName("mrEdit")[0]
 
+            mrEdit.classList.add("datepicker");
             
-            var pref = document.createElement("i")
-            pref.classList.add("material-icons")
-            pref.classList.add("prefix")
-            pref.innerHTML = "call"
-
-            inputField.appendChild(pref);
-            inputField.removeChild(label);
-            inputField.removeChild(span);
-            inputField.appendChild(textA);
-            inputField.appendChild(label);
         </script>
         </div>
         <div class="l-footer">
