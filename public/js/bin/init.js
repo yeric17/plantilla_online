@@ -7,26 +7,39 @@ document.addEventListener('DOMContentLoaded', function() {
         textAreas[x].classList.add("materialize-textarea")
     }
 
-    var mrQuestionTable = document.getElementsByClassName("mrQuestionTable")[0]
-    var spans
-    if(mrQuestionTable !== undefined){
-        spans= mrQuestionTable.getElementsByTagName("span")
+    var table = document.getElementsByClassName("mrQuestionTable")[0]
+    if(table !== undefined){
+        var tds = table.getElementsByTagName("td")
     }
-    if(spans){
-        for(var x = 0; x < spans.length; x++){
-    
-            var input = spans[x].getElementsByClassName("mrMultiple")[0] || undefined
-            
+    if(tds !== undefined){
+        table.classList.add("responsive-table")
+        table.classList.add("highlight")
+        for(var x = 0; x < tds.length; x++){
+            var input = tds[x].getElementsByTagName("input")[0]
             if(input !== undefined){
-                label = spans[x].getElementsByTagName("label")[0]
-                var innSpan = label.getElementsByTagName("span")[0]
-    
-                label.removeChild(innSpan);
-                spans[x].removeChild(input);
-                label.appendChild(input);
-                label.appendChild(innSpan);
+                var label = document.createElement("label")
+                var span = document.createElement("span")
+
+                label.appendChild(span)
+                label.setAttribute("for",input.id)
+                tds[x].appendChild(label)
             }
         }
     }
+
+    var inputFields = document.getElementsByClassName("input-field");
+
+    for(var x = 0; x < inputFields.length; x++){
+        var span = inputFields[x].getElementsByTagName("span")[0];
+        var textA = span.getElementsByClassName("mrEdit")[0];
+        var label = inputFields[x].getElementsByTagName("label")[0];
+        
+        inputFields[x].removeChild(label);
+        inputFields[x].removeChild(span);
+
+        inputFields[x].appendChild(textA);
+        inputFields[x].appendChild(label);
+    }
+
 
   });

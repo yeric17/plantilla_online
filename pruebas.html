@@ -18,8 +18,8 @@
 
 <body>
 	<form name="mrForm" id="mrForm" action="http://localhost:5080" method="post"><input type="hidden" name="I.Engine"
-		 value="Server" /><input type="hidden" name="I.Project" value="online" /><input type="hidden" name="I.Session" value="4ktjkz5uycyedmfvopvu4ypdnqaqaaaa" /><input
-		 type="hidden" name="I.SavePoint" value="Q_MultipleChoice" /><input type="hidden" name="I.Renderer" value="HTMLPlayer" />
+		 value="Server" /><input type="hidden" name="I.Project" value="online" /><input type="hidden" name="I.Session" value="st6hztc4eohehomcgfqqyorv33aqaaaa" /><input
+		 type="hidden" name="I.SavePoint" value="P_DatosPersonales" /><input type="hidden" name="I.Renderer" value="HTMLPlayer" />
 		<div class="main">
 			<div class="navbar-fixed z-depth-3">
 				<nav>
@@ -29,70 +29,50 @@
 				</nav>
 			</div>
 			<div class="container content">
+				<div></div>
+				<span class="mrQuestionText" style=""></span>
+				<style>
+					.mrEdit{
+            margin-left: 0 !important;
+        }
+    </style>
 				<div class="container">
-					<div class="card hoverable">
-						<div class="card-content teal lighten-2 white-text">
-							<div></div>
-							<span class="mrQuestionText" style="">Seleccione varias respuestas</span>
-						</div>
-						<div class="card-action">
+					<div class="">
+						<div class="">
 							<div class="input-field">
 								<div></div>
 								<span style="">
-									<span class="mrQuestionTable" style="display:block;margin-left: 1em;">
-										<span id="Cell.0.0" style="">
-											<div></div>
-											<input type="checkbox" name="_QQ__MultipleChoice_C__1" id="_Q0_C0" class="mrMultiple" style="margin-left: 1em;"
-											 value="__1">
-											<label for="_Q0_C0">
-												<span class="mrMultipleText" style="">Cafe</span>
-											</label>
-											</input>
-										</span>
-										<span id="Cell.0.1" style="">
-											<div></div>
-											<input type="checkbox" name="_QQ__MultipleChoice_C__2" id="_Q0_C1" class="mrMultiple" style="margin-left: 1em;"
-											 value="__2">
-											<label for="_Q0_C1">
-												<span class="mrMultipleText" style="">Chocolate</span>
-											</label>
-											</input>
-										</span>
-										<span id="Cell.0.2" style="">
-											<div></div>
-											<input type="checkbox" name="_QQ__MultipleChoice_C__3" id="_Q0_C2" class="mrMultiple" style="margin-left: 1em;"
-												value="__3">
-											<label for="_Q0_C2">
-												
-												<span class="mrMultipleText" style="">Azucar</span>
-											</label>
-											</input>
-										</span>
-									</span>
+									<div></div>
+									<textarea name="_QP__DatosPersonales_QQ__OpenEnded__Name" id="_Q0" class="mrEdit" autocomplete="off" style="margin-left: 1em;"
+									 rows="6" cols="40"></textarea>
 								</span>
+								<label for="_Q0">
+									<div></div>
+									<span class="mrQuestionText" style="">Nombre</span>
+								</label>
 							</div>
 						</div>
 					</div>
 				</div>
-			<script>
-				var mrQuestionTable = document.getElementsByClassName("mrQuestionTable")[0]
-				var spans = mrQuestionTable.getElementsByTagName("span")
-				console.log(spans)
-				for(var x = 0; x < spans.length; x++){
-
-					var input = spans[x].getElementsByClassName("mrMultiple")[0] || undefined
-					
-					if(input !== undefined){
-						label = spans[x].getElementsByTagName("label")[0]
-						var innSpan = label.getElementsByTagName("span")[0]
-
-						label.removeChild(innSpan);
-						spans[x].removeChild(input);
-						label.appendChild(input);
-						label.appendChild(innSpan);
-					}
-				}
-        	</script>
+				<div class="container">
+					<div class="">
+						<div class="">
+							<div class="input-field">
+								<i class="material-icons prefix">call</i>
+								<div></div>
+								<span style="">
+									<div></div>
+									<textarea name="_QP__DatosPersonales_QQ__OpenEnded__Cel" id="_Q1" class="mrEdit" autocomplete="off" style="margin-left: 1em;"
+									 rows="6" cols="40"></textarea>
+								</span>
+								<label for="_Q1">
+									<div></div>
+									<span class="mrQuestionText" style="">Número de Celular</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<footer class="page-footer">
 				<div class="footer-copyright">

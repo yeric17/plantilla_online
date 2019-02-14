@@ -18,3 +18,11 @@ input{
 .content{
     flex-grow: 1;
 }
+
+tbody{
+    margin-left: auto;
+    margin-right: auto;
+}
+.material-icons ~ .mrEdit{
+    margin-left: 3rem !important;
+}
