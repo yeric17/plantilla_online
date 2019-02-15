@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         textAreas[x].classList.add("materialize-textarea")
     }
 
+    elems = document.querySelectorAll('.tooltipped');
+    var Tooltips = M.Tooltip.init(elems, {});
+
+
     var table = document.getElementsByClassName("mrQuestionTable")[0]
     if(table !== undefined){
         var tds = table.getElementsByTagName("td")

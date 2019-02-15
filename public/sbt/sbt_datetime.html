@@ -27,6 +27,9 @@
         <script>
             var inputField = document.getElementsByClassName("input-field")[0];
             var mrEdit = inputField.getElementsByClassName("mrEdit")[0]
+            var PlaceHolder = "Ingrese aquí la hora"
+
+            mrEdit.setAttribute("placeholder", PlaceHolder)
             mrEdit.classList.add("timepicker");
 
             document.addEventListener('DOMContentLoaded', function() {
