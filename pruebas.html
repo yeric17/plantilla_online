@@ -12,14 +12,20 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" type="text/css" href="C:\Users\Carlos.Rios\Documents\YERIC\PlantillaOnline/public/css/materialize.css" />
+	<link rel="stylesheet" type="text/css" href="public/css/materialize.css" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<script type="text/javascript" src="public/js/bin/materialize.js">
+		Text
+	</script>
+	<script type="text/javascript" src="public/js/bin/init.js">
+		Text
+	</script>
 </head>
 
 <body>
-	<form name="mrForm" id="mrForm" action="http://localhost:5080" method="post"><input type="hidden" name="I.Engine"
-		 value="Server" /><input type="hidden" name="I.Project" value="online" /><input type="hidden" name="I.Session" value="qxw4zcmcxm1evmkglbpbygokyyaqaaaa" /><input
-		 type="hidden" name="I.SavePoint" value="Q_OpendEnded" /><input type="hidden" name="I.Renderer" value="HTMLPlayer" />
+	<form name="mrForm" id="mrForm" action="http://localhost:5081" method="post"><input type="hidden" name="I.Engine"
+		 value="Server" /><input type="hidden" name="I.Project" value="online" /><input type="hidden" name="I.Session" value="3aosdfkekd1uzipgx5rlspjxsmaqaaaa" /><input
+		 type="hidden" name="I.SavePoint" value="Q_OpenEnded_Autocomplete" /><input type="hidden" name="I.Renderer" value="HTMLPlayer" />
 		<div class="main">
 			<div class="navbar-fixed z-depth-3">
 				<nav>
@@ -30,54 +36,55 @@
 			</div>
 			<div class="container content">
 				<div class="container">
-					<div class="card-horizontal">
+					<div class="card horizontal">
 						<div class="card-image">
-							<img src="https://lorempixel.com/100/190/nature/6" />
+							<img src="https://lorempixel.com/100/100/nature/6" />
 						</div>
 						<div class="card-stacked">
-							<div></div>
-							<span class="mrBannerText" style="">
-								<div class="card-content">
-									<div class="card-title">Titulo</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dicta
+							<div class="card-content">
+								<div></div>
+								<span class="mrBannerText" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dicta
 									doloremque officiis soluta ratione eum rerum nam est cupiditate eius, dignissimos magni excepturi maxime quia
-									atque aperiam illum optio nulla.
-								</div>
-							</span>
-						</div>
-					</div>
-				</div>
-				<style>
-					label{
-                color: inherit !important;
-            }   
-            .mrQuestionText{
-                color: inherit;
-            }
-            .mrEdit{
-                margin-left: 0 !important;
-            } 
-        </style>
-				<div class="container">
-					<div class="card hoverable">
-						<div class="card-content teal lighten-2 white-text">
-							<label for="_Q0">
-								<div></div>
-								<span class="mrQuestionText" style="">Abierta normal <a class="tooltipped" data-position="bottom" data-tooltip="Este es un mensaje de ayuda"><i
-										 class="material-icons white-text tiny">info</i></a></span>
-							</label>
-						</div>
-						<div class="card-action">
-							<div class="input-field">
-								<div></div>
-								<span style="">
-									<div></div>
-									<textarea name="_QQ__OpendEnded" id="_Q0" class="mrEdit" autocomplete="off" style="margin-left: 1em;" rows="6"
-									 cols="40"></textarea>
-								</span>
+									atque aperiam illum optio nulla.</span>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="container">
+					<div class="card hoverable">
+						<div class="card-action">
+							<div class="input-field" id="inputFieldAutoComplete">
+								<i class="material-icons prefix">textsms</i>
+								<div></div>
+								<span style="">
+									<div></div>
+									<input type="text" name="_QQ__OpenEnded__Autocomplete" id="_Q0" class="mrEdit" autocomplete="off" style="margin-left: 1em;"
+									 maxlength="1024" value="" />
+								</span>
+								<label for="_Q0">
+									<div></div>
+									<span class="mrQuestionText" style="">Seleccione una marca</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					document.addEventListener('DOMContentLoaded', function () {
+						var input = document.getElementById("inputFieldAutoComplete").getElementsByTagName("input")[0]
+						var autocom = document.querySelectorAll('.autocomplete');
+						input.classList.add("autocomplete")
+						input.autocomplete = true
+						Autocomplete = M.Autocomplete.init(autocom, {
+							data: {
+								"Apple": null,
+								"Microsoft": null,
+								"Google": 'https://placehold.it/250x250',
+								"Go": null
+							}
+						});
+					});
+				</script>
 			</div>
 			<footer class="page-footer">
 				<div class="footer-copyright">
@@ -85,7 +92,7 @@
 				</div>
 			</footer>
 			<div class="fixed-action-btn ">
-				<div class="btn-floating btn-large red waves-effect waves-light pulse">
+				<div id="btnNext" class="btn-floating btn-large red waves-effect waves-light pulse">
 					<i class="large material-icons">keyboard_arrow_right</i>
 					<input type="submit" name="_NNext" class="mrNext" style="width: 70px;" value="" alt=""></input>
 				</div>
@@ -98,12 +105,6 @@
 				</ul>
 			</div>
 		</div>
-		<script type="text/javascript" src="C:\Users\Carlos.Rios\Documents\YERIC\PlantillaOnline/public/js/bin/materialize.js">
-			Text
-		</script>
-		<script type="text/javascript" src="C:\Users\Carlos.Rios\Documents\YERIC\PlantillaOnline/public/js/bin/init.js">
-			Text
-		</script>
 	</form>
 </body>
 

@@ -23,20 +23,21 @@
                 </div>
             </div>
         </div>
-
         <script>
             var inputField = document.getElementsByClassName("input-field")[0];
             var mrEdit = inputField.getElementsByClassName("mrEdit")[0]
             var PlaceHolder = "Ingrese aquí la hora"
-
             mrEdit.setAttribute("placeholder", PlaceHolder)
             mrEdit.classList.add("timepicker");
 
             document.addEventListener('DOMContentLoaded', function() {
                 var elems = document.querySelectorAll('.timepicker');
-                var TimePicker = M.Timepicker.init(elems, {
-                    
-                }); 
+                var instances = M.Timepicker.init(elems, {
+                    i18n: { 
+                        cancel: "Cancelar",
+                        done: "Aceptar"
+                    }
+                });
             });
         </script>
 </mrSubTemplate>

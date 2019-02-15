@@ -1,16 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var FloatButton = M.FloatingActionButton.init(elems,{direction: 'left'});
 
+    var elems = document.querySelectorAll('select');
+    var FormSelect = M.FormSelect.init(elems, {});
+
+    elems = document.querySelectorAll('.fixed-action-btn');
+    var FloatButton = M.FloatingActionButton.init(elems,{direction: 'left'});
+    
+    elems = document.querySelectorAll('.tooltipped');
+    var Tooltips = M.Tooltip.init(elems, {});
+    
     var textAreas = document.getElementsByTagName("textarea");
     for(var x = 0; x < textAreas.length; x++){
         textAreas[x].classList.add("materialize-textarea")
     }
-
-    elems = document.querySelectorAll('.tooltipped');
-    var Tooltips = M.Tooltip.init(elems, {});
-
-
     var table = document.getElementsByClassName("mrQuestionTable")[0]
     if(table !== undefined){
         var tds = table.getElementsByTagName("td")
@@ -35,14 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for(var x = 0; x < inputFields.length; x++){
         var span = inputFields[x].getElementsByTagName("span")[0];
-        var textA = span.getElementsByClassName("mrEdit")[0];
-        var label = inputFields[x].getElementsByTagName("label")[0];
-        
-        inputFields[x].removeChild(label);
-        inputFields[x].removeChild(span);
+        if(span !== undefined){
+            var textA = span.getElementsByClassName("mrEdit")[0];
+            var label = inputFields[x].getElementsByTagName("label")[0];        
+            if(label !== undefined){
+                inputFields[x].removeChild(label)
+                inputFields[x].removeChild(span);
+                inputFields[x].appendChild(textA);
+                inputFields[x].appendChild(label);
+            };
+        }
 
-        inputFields[x].appendChild(textA);
-        inputFields[x].appendChild(label);
     }
 
 
